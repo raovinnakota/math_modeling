@@ -14,6 +14,8 @@ path(1,2) = bound_down;
 for i=1:steps-1
     %iterate through the # of steps and choose one direction to move in
     if rand < 0.25
+        %Check if we're nearing a boundary. We can step to and exist at the
+        %boundary, but cannot go beyond it. 
         if path(i,1) <= bound_right - 1
             path(i+1,1) = path(i,1) + 1;
         else
@@ -50,4 +52,6 @@ for i=1:steps-1
         continue
     end
 end
+%Simulation is over, path has been modified. Plot results:
+plot(path(:,1), path(:,2))
 end
