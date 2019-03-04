@@ -8,8 +8,8 @@ y(1)=y0;
 n=length(x);
 
 for ii=1:(n-1)
-  %y(ii+1)=y(ii)+h*MyFunction(x(ii),y(ii)); %f1
-  y(ii+1)=y(ii)+h*MyFunction2(x(ii),y(ii)); %f2
+  y(ii+1)=y(ii)+h*MyFunction(x(ii),y(ii)); %f1
+  %y(ii+1)=y(ii)+h*MyFunction2(x(ii),y(ii)); %f2
 end
 plot(x,y);
 end
