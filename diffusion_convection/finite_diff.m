@@ -1,5 +1,6 @@
 function [ path ] = finite_diff(tfinal, deltax, k, xfinal, tdelta)
 %1D FTCS diffusion/convection code
+%Worked with Elliott Goldstein on writing code
 [x,t] = meshgrid(0:deltax:xfinal, 0:tdelta:tfinal);
 alpha=(k*tdelta)/(deltax).^2;
 f=zeros(size(x));
