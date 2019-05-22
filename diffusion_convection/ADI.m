@@ -13,7 +13,8 @@ m=length(x(:,1,1));
 n=length(y(1,:,1));
 p=length(t(1,1,:));
 fn=(zeros(m,n,p));
-
+%4 tridiagonal matrices, 2 going in x and 2 going in y
+%matrices components' calculations are derived from the resource provided
 ax=diag((1+alphax)*ones(m,1))+diag((-cx/4+(alphax/2))*(ones(m-1,1)),-1)+diag((cx/4-(alphax/2))*ones(m-1,1),1);
 ay=diag((1+alphay)*ones(m,1))+diag((-cy/4+(alphay/2))*(ones(m-1,1)),-1)+diag((cy/4-(alphay/2))*ones(m-1,1),1);
 bx=diag((1-alphax)*ones(n,1))+diag((alphax/2+cx/4)*(ones(n-1,1)),-1)+diag((alphay/2-cx/4)*ones(n-1,1),1)
